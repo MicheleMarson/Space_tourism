@@ -1,0 +1,146 @@
+@import url("./index.css");
+
+section {
+	padding: 0 110px 110px 110px;
+}
+
+.left {
+	width: 445px;
+	height: 445px;
+}
+
+img {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+}
+
+.grid {
+	align-items: center;
+	justify-content: center;
+	display: grid;
+	grid-template-columns: 50% 50%;
+}
+
+.right {
+	max-width: 450px;
+}
+
+.text {
+	margin-bottom: 54px;
+}
+
+.title {
+	font-size: 100px;
+	margin-bottom: 24px;
+}
+
+.des-nav {
+	margin-bottom: 55px;
+}
+
+.des-nav ul {
+	display: flex;
+}
+
+.des-nav ul li {
+	padding-bottom: 16px;
+	text-transform: uppercase;
+	color: #d0d6f9;
+	letter-spacing: 2.7px;
+	font-size: 16px;
+	margin-right: 32px;
+	font-family: "Barlow Condensed", sans-serif;
+	position: relative;
+	cursor: pointer;
+}
+
+.des-nav ul li.active {
+	color: #fff;
+}
+
+.des-nav ul li.active::after {
+	background: #fff;
+}
+
+.des-nav ul li::after {
+	content: "";
+	transition: 0.15s ease-in;
+	height: 3px;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+.des-nav ul li:hover:after {
+	background: #979797;
+}
+
+.bottom-content {
+	border-top: 1px solid #979797;
+	padding-top: 28px;
+}
+
+.bottom-content span {
+	text-transform: uppercase;
+	font-family: "Barlow Condensed", sans-serif;
+	font-size: 14px;
+	color: #d0d6f9;
+	letter-spacing: 2.36px;
+}
+
+.bottom-content p {
+	font-size: 28px;
+	color: #fff;
+	font-family: "Bellefair", sans-serif;
+}
+
+.bottom-content ul {
+	display: grid;
+	grid-template-columns: 50% 50%;
+}
+
+.bottom-content ul p {
+	padding-top: 12px;
+}
+
+/* tablet/ipad */
+@media only screen and (max-width: 768px) {
+	.text {
+		font-size: 16px;
+	}
+	section {
+		padding: 0 38px 62px 38px;
+	}
+
+	.grid {
+		grid-template-columns: 100%;
+	}
+
+	.left {
+		width: 300px;
+		height: 300px;
+		margin: 0 auto 52px auto;
+	}
+
+	.right {
+		margin: auto;
+		text-align: center;
+	}
+
+	.des-nav ul li {
+		margin: 0 16px;
+	}
+
+	.des-nav ul {
+		justify-content: center;
+	}
+
+	.title {
+		font-size: 80px;
+	}
+}
+
+/* mobile */
+@media only screen and (max-width: 510px) {
+}

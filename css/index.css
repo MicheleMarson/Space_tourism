@@ -1,0 +1,266 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bellefair&display=swap");
+
+html {
+	position: relative;
+}
+html,
+body {
+	min-height: 100vh;
+	overflow: auto;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.title {
+	color: #fff;
+	text-transform: uppercase;
+	font-family: "Bellefair", sans-serif;
+}
+
+.title-h3 {
+	margin-bottom: 66px;
+	text-transform: uppercase;
+	color: #fff;
+	font-family: "Barlow Condensed", sans-serif;
+	font-size: 28px;
+	letter-spacing: 4.72px;
+}
+
+.title-h3 span {
+	color: #979797;
+}
+
+.text {
+	color: #d0d6f9;
+	font-size: 18px;
+	font-family: "Barlow", sans-serif;
+}
+
+.burger {
+	height: 24px;
+	width: 21px;
+	z-index: 30;
+	transition: display 0.125s ease;
+	cursor: pointer;
+	display: none;
+	justify-content: space-around;
+	flex-direction: column;
+}
+
+/* active------------------- */
+nav.active {
+	transition: all 0.2s ease;
+}
+.active .burger {
+	position: relative;
+	justify-content: center;
+}
+.active .burger div:nth-child(1) {
+	/* /* position: absolute; */
+	transform: rotateZ(-45deg);
+}
+.active .burger div:nth-child(2) {
+	display: none;
+}
+.active .burger div:nth-child(3) {
+	position: absolute;
+	transform: rotateZ(45deg);
+}
+section.active {
+	transition: all 0.5s ease-in-out;
+	filter: blur(6px);
+}
+.active .nav-bar {
+	display: block;
+}
+.nav-bar ul li.active::after {
+	background: #fff;
+}
+
+/* active------------------- */
+
+.burger div {
+	height: 3px;
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	background: #d0d6f9;
+}
+
+body {
+	background: #0b0d17;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+nav {
+	text-transform: uppercase;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 55px 0 55px 55px;
+}
+
+nav a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	box-sizing: border-box;
+	letter-spacing: 2.7px;
+	color: #fff;
+}
+
+.nav-logo img {
+	height: 48px;
+	width: 48px;
+}
+
+.nav-bar {
+	width: 60%;
+	background: rgba(255, 255, 255, 0.04);
+	/* padding: 38px; */
+	height: 96px;
+	position: relative;
+}
+
+.nav-bar::before {
+	width: 65%;
+	height: 2px;
+	top: 50%;
+	transform: translateY(-50%);
+	background: #979797;
+	content: "";
+	right: 90%;
+	z-index: 10;
+	position: absolute;
+}
+
+.nav-bar ul {
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+}
+
+.nav-bar ul li {
+	position: relative;
+	cursor: pointer;
+	font-size: 16px;
+	margin: 0 20px;
+	height: 100%;
+	font-family: "Barlow Condensed", sans-serif;
+}
+
+.nav-bar ul li span {
+	font-weight: bold;
+}
+
+.nav-bar ul li::after {
+	content: "";
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	height: 3px;
+	transition: 0.15s ease-in;
+}
+.nav-bar ul li:hover::after {
+	background: #979797;
+}
+
+@media only screen and (max-width: 1130px) {
+	.nav-bar::before {
+		display: none;
+	}
+
+	.nav-bar {
+		width: 85%;
+	}
+}
+
+/* tablet/ipad */
+@media only screen and (max-width: 768px) {
+	.text {
+		font-size: 16px;
+	}
+
+	.title-h3 {
+		font-size: 20px;
+	}
+}
+
+/* mobile */
+@media only screen and (max-width: 510px) {
+	nav {
+		margin: 24px;
+	}
+	.nav-bar {
+		display: none;
+		position: fixed;
+		top: 0;
+		right: 0;
+		left: 30%;
+		height: 100vh;
+		z-index: 10;
+		width: unset;
+		background: rgba(0, 0, 0, 0.404);
+		/* box-shadow: inset 0 0 0 50vw rgba(255, 255, 255, 0.04); */
+	}
+
+	.text {
+		font-size: 15px;
+	}
+
+	.nav-bar ul li:first-child {
+		margin-top: 112px;
+	}
+
+	.nav-bar ul {
+		/* margin-top: 112px; */
+		align-items: flex-start;
+		flex-direction: column;
+		justify-content: flex-start;
+	}
+
+	.nav-bar ul li {
+		margin: 0 0 0 20px;
+		width: 100%;
+		height: unset;
+		padding-bottom: 19px;
+		display: flex;
+		align-items: center;
+	}
+
+	.nav-bar ul li::after {
+		height: 31px;
+		top: 0;
+		width: 4px;
+		right: 20px;
+	}
+
+	.nav-bar a {
+		width: 100%;
+		display: initial;
+		height: 31px;
+	}
+
+	.nav-logo img {
+		height: 40px;
+		width: 40px;
+	}
+
+	.burger {
+		z-index: 20;
+		display: flex;
+	}
+}
