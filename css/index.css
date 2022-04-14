@@ -58,6 +58,7 @@ section {
 }
 
 /* active------------------- */
+
 nav.active {
 	transition: all 0.2s ease;
 }
@@ -204,6 +205,14 @@ nav a {
 	.title-h3 {
 		font-size: 20px;
 	}
+
+	.nav-bar ul li a span {
+		display: none;
+	}
+
+	.nav-bar ul li {
+		font-size: 14px;
+	}
 }
 
 /* mobile */
@@ -246,6 +255,7 @@ nav a {
 		padding-bottom: 19px;
 		display: flex;
 		align-items: center;
+		font-size: 16px;
 	}
 
 	.nav-bar ul li::after {
@@ -269,5 +279,8 @@ nav a {
 	.burger {
 		z-index: 20;
 		display: flex;
+	}
+	.nav-bar ul li a span {
+		display: inline;
 	}
 }

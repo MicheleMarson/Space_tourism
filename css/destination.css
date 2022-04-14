@@ -146,4 +146,28 @@ img {
 	.title-h3 {
 		text-align: center;
 	}
+
+	.title {
+		font-size: 56px;
+	}
+
+	.text {
+		font-size: 15px;
+	}
+
+	section {
+		padding: 0 26px 26px 26px;
+	}
+
+	.bottom-content ul {
+		grid-template-columns: 100%;
+	}
+
+	.bottom-content ul li:nth-child(2) {
+		padding-top: 28px;
+	}
+
+	.des-nav ul li {
+		font-size: 14px;
+	}
 }
