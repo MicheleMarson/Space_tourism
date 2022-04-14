@@ -143,4 +143,7 @@ img {
 
 /* mobile */
 @media only screen and (max-width: 510px) {
+	.title-h3 {
+		text-align: center;
+	}
 }

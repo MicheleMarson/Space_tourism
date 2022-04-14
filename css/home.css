@@ -50,10 +50,6 @@
 
 /* tablet/ipad */
 @media only screen and (max-width: 768px) {
-	.title {
-		font-size: 18px;
-	}
-
 	.sub-title {
 		font-size: 16px;
 	}
@@ -100,6 +96,10 @@
 		height: 150px;
 		width: 150px;
 		font-size: 20px;
+	}
+
+	.title {
+		font-size: 80px;
 	}
 }
 

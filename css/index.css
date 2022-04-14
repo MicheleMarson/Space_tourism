@@ -16,6 +16,11 @@ body {
 	box-sizing: border-box;
 }
 
+section {
+	transition: all 0.5s ease-in-out;
+	filter: blur(0px);
+}
+
 .title {
 	color: #fff;
 	text-transform: uppercase;
@@ -57,8 +62,9 @@ nav.active {
 	transition: all 0.2s ease;
 }
 .active .burger {
-	position: relative;
 	justify-content: center;
+	position: fixed;
+	right: 24px;
 }
 .active .burger div:nth-child(1) {
 	/* /* position: absolute; */
@@ -164,6 +170,7 @@ nav a {
 
 .nav-bar ul li span {
 	font-weight: bold;
+	padding-right: 10px;
 }
 
 .nav-bar ul li::after {
