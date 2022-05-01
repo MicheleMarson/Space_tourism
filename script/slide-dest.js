@@ -7,8 +7,7 @@ $(() => {
 	const avgDist = $(".avg-dist");
 	const travelTime = $(".travel-time");
 	const img = $(".left img");
-	navElem.click(function (e) {
-		let id = +e.target.id;
+	let effect = (id) => {
 		$(".nav-content, .bottom-content,.left img").fadeOut(350, () => {
 			$(".des-nav").find(`li#${id}`).addClass("active");
 			$(`.des-nav li:not(#${id})`).removeClass("active");
@@ -18,10 +17,15 @@ $(() => {
 			avgDist.text(data.destinations[id].distance);
 			travelTime.text(data.destinations[id].travel);
 		});
-		$(".nav-content, .bottom-content,.left img")
-			.promise()
-			.done(() => {
-				$(".nav-content, .bottom-content,.left img").fadeIn();
-			});
+	};
+	navElem.click(function (e) {
+		let id = +e.target.id;
+		// after image finishes loading fade in
+		$.when(effect(id)).done(() => {
+			$(".nav-content, .bottom-content,.left img").fadeIn();
+		});
+		// $(".nav-content, .bottom-content,.left img")
+		// 	.promise()
+		// 	.done(() => {});
 	});
 });

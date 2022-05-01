@@ -6,9 +6,7 @@ $(() => {
 	const text = $(".text");
 	const name = $(".name");
 	const img = $(".image img");
-	navElem.click(function (e) {
-		console.log(e);
-		let id = +e.target.id;
+	const effect = (id) => {
 		$(".top, .image").fadeOut(350, () => {
 			$(".carousel").find(`div#${id}`).addClass("active");
 			$(`.carousel div:not(#${id})`).removeClass("active");
@@ -16,6 +14,12 @@ $(() => {
 			title.text(data.crew[id].role);
 			text.text(data.crew[id].bio);
 			name.text(data.crew[id].name);
+		});
+	};
+	navElem.click(function (e) {
+		let id = +e.target.id;
+		// after image finishes loading fade in
+		$.when(effect(id)).done(() => {
 			$(".top, .image").fadeIn();
 		});
 	});
