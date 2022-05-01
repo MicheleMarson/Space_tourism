@@ -11,7 +11,7 @@ $(() => {
 		$(".nav-content, .bottom-content,.left img").fadeOut(350, () => {
 			$(".des-nav").find(`li#${id}`).addClass("active");
 			$(`.des-nav li:not(#${id})`).removeClass("active");
-			img.attr("src", data.destinations[id].images.webp);
+			img.attr("src", data.destinations[id].images.png);
 			title.text(data.destinations[id].name);
 			text.text(data.destinations[id].description);
 			avgDist.text(data.destinations[id].distance);
@@ -22,7 +22,7 @@ $(() => {
 		let id = +e.target.id;
 		// after image finishes loading fade in
 		$.when(effect(id)).done(() => {
-			$(".nav-content, .bottom-content,.left img").fadeIn();
+			$(".nav-content, .bottom-content,.left img").fadeOut(100).fadeIn();
 		});
 		// $(".nav-content, .bottom-content,.left img")
 		// 	.promise()
