@@ -8,9 +8,9 @@ $(() => {
 	const img = $(".image img");
 	const effect = (id) => {
 		$(".top, .image").fadeOut(350, () => {
+			img.attr("src", data.crew[id].images.webp);
 			$(".carousel").find(`div#${id}`).addClass("active");
 			$(`.carousel div:not(#${id})`).removeClass("active");
-			img.attr("src", data.crew[id].images.webp);
 			title.text(data.crew[id].role);
 			text.text(data.crew[id].bio);
 			name.text(data.crew[id].name);
@@ -20,7 +20,8 @@ $(() => {
 		let id = +e.target.id;
 		// after image finishes loading fade in
 		$.when(effect(id)).done(() => {
-			$(".top, .image").fadeIn();
+			console.log("loaded");
+			$(".top, .image").fadeOut(100).fadeIn();
 		});
 	});
 });
