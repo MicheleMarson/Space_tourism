@@ -5,7 +5,6 @@ $(() => {
 	const title = $(".title");
 	const text = $(".text");
 	const name = $(".name");
-	const img = $(".image img");
 	const effect = (id) => {
 		$(".top, .image").fadeOut(250, () => {
 			// img.attr("src", data.crew[id].images.png);
@@ -20,9 +19,8 @@ $(() => {
 	};
 	navElem.click(function (e) {
 		let id = +e.target.id;
-		// after image finishes loading fade in
 		$.when(effect(id)).done(() => {
-			$(".top, .image").fadeOut(100).fadeIn();
+			$(".top, .image").fadeIn();
 		});
 	});
 });

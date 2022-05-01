@@ -7,11 +7,13 @@ body {
 }
 
 .left {
+	/* position: relative; */
 	width: 445px;
 	height: 445px;
 }
 
 img {
+	/* position: absolute; */
 	object-fit: cover;
 	width: 100%;
 	height: 100%;
