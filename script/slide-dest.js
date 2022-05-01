@@ -24,8 +24,5 @@ $(() => {
 		$.when(effect(id)).done(() => {
 			$(".nav-content, .bottom-content,.left img").fadeOut(100).fadeIn();
 		});
-		// $(".nav-content, .bottom-content,.left img")
-		// 	.promise()
-		// 	.done(() => {});
 	});
 });

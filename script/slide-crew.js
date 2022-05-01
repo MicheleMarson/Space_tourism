@@ -20,7 +20,6 @@ $(() => {
 		let id = +e.target.id;
 		// after image finishes loading fade in
 		$.when(effect(id)).done(() => {
-			console.log("loaded");
 			$(".top, .image").fadeOut(100).fadeIn();
 		});
 	});
