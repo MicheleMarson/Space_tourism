@@ -1,7 +1,9 @@
 @import url("./index.css");
 
-section {
-	padding: 0 110px 110px 110px;
+body {
+	background: url("../assets/destination/background-destination-desktop.jpg")
+		fixed no-repeat;
+	background-size: cover;
 }
 
 .left {
@@ -109,9 +111,6 @@ img {
 	.text {
 		font-size: 16px;
 	}
-	section {
-		padding: 0 38px 62px 38px;
-	}
 
 	.grid {
 		grid-template-columns: 100%;
@@ -153,10 +152,6 @@ img {
 
 	.text {
 		font-size: 15px;
-	}
-
-	section {
-		padding: 0 26px 26px 26px;
 	}
 
 	.bottom-content ul {

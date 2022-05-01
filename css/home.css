@@ -1,5 +1,10 @@
 @import url("./index.css");
 
+body {
+	background: url("../assets/home/background-home-desktop.jpg") fixed no-repeat;
+	background-size: cover;
+}
+
 .title {
 	padding-bottom: 63px;
 	font-size: 150px;
@@ -30,8 +35,8 @@
 
 .btn {
 	background: #fff;
-	height: 274px;
-	width: 274px;
+	height: 200px;
+	width: 200px;
 	text-align: center;
 	display: table-cell;
 	vertical-align: middle;

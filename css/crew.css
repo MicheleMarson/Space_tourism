@@ -1,1 +1,87 @@
 @import url("./index.css");
+
+body {
+	position: relative;
+	background: url("../assets/crew/background-crew-desktop.jpg") fixed no-repeat;
+	background-size: cover;
+}
+
+section {
+	overflow: hidden;
+	padding: 0 110px 94px 110px;
+}
+
+.content {
+	display: flex;
+}
+
+.left {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 50%;
+	margin-right: 16px;
+	height: 406px;
+}
+.right {
+	width: 50%;
+}
+
+.title {
+	color: rgba(255, 255, 255, 0.542);
+	font-size: 32px;
+	font-weight: 300;
+	padding-bottom: 26px;
+}
+
+.name {
+	color: #fff;
+	font-size: 56px;
+	text-transform: uppercase;
+	font-family: "Bellefair", sans-serif;
+	padding-bottom: 46px;
+}
+
+.text {
+	max-width: 445px;
+	font-family: "Barlow", sans-serif;
+	/* padding-bottom: 122px; */
+}
+
+.carousel {
+	display: flex;
+}
+
+.carousel div {
+	margin: 10px;
+	width: 15px;
+	height: 15px;
+	background: rgba(255, 255, 255, 0.17);
+	border-radius: 50%;
+}
+
+.carousel div:hover {
+	background: rgba(255, 255, 255, 0.418);
+	cursor: pointer;
+}
+
+.carousel div.active {
+	background: #fff;
+}
+
+.image > img {
+	position: absolute;
+	bottom: 0;
+	height: 65%;
+	width: 50%;
+	object-fit: contain;
+	right: 0%;
+}
+/*
+.right div {
+	position: relative;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 484px;
+} */
