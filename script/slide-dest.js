@@ -8,10 +8,10 @@ $(() => {
 	const travelTime = $(".travel-time");
 	const img = $(".left img");
 	let effect = (id) => {
-		$(".nav-content, .bottom-content,.left img").fadeOut(350, () => {
+		$(".nav-content, .bottom-content,.left img").fadeOut(350, async () => {
+			await img.attr("src", data.destinations[id].images.png);
 			$(".des-nav").find(`li#${id}`).addClass("active");
 			$(`.des-nav li:not(#${id})`).removeClass("active");
-			img.attr("src", data.destinations[id].images.png);
 			title.text(data.destinations[id].name);
 			text.text(data.destinations[id].description);
 			avgDist.text(data.destinations[id].distance);
