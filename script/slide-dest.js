@@ -17,7 +17,9 @@ $(() => {
 			text.text(data.destinations[id].description);
 			avgDist.text(data.destinations[id].distance);
 			travelTime.text(data.destinations[id].travel);
-			$(".nav-content, .bottom-content,.left img").fadeIn();
+			if (img.attr("src", data.destinations[id].images.webp)) {
+				$(".nav-content, .bottom-content,.left img").fadeIn();
+			}
 		});
 	});
 });
