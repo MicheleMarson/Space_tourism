@@ -7,7 +7,7 @@ $(() => {
 	const name = $(".name");
 	const img = $(".image img");
 	const effect = (id) => {
-		$(".top, .image").fadeOut(350, () => {
+		$(".top, .image").fadeOut(250, () => {
 			// img.attr("src", data.crew[id].images.png);
 			$(".carousel").find(`div#${id}`).addClass("active");
 			$(`.carousel div:not(#${id})`).removeClass("active");
