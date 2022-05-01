@@ -9,7 +9,7 @@ $(() => {
 	navElem.click(function (e) {
 		console.log(e);
 		let id = +e.target.id;
-		$(".top, .image").fadeOut(300, () => {
+		$(".top, .image").fadeOut(350, () => {
 			$(".carousel").find(`div#${id}`).addClass("active");
 			$(`.carousel div:not(#${id})`).removeClass("active");
 			img.attr("src", data.crew[id].images.webp);
