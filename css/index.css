@@ -21,6 +21,19 @@ section {
 	padding: 0 110px 50px 110px;
 }
 
+.name {
+	color: #fff;
+	font-size: 56px;
+	text-transform: uppercase;
+	font-family: "Barlow Condensed", sans-serif;
+	padding-bottom: 46px;
+}
+
+.text {
+	max-width: 445px;
+	font-family: "Barlow", sans-serif;
+}
+
 .title {
 	color: #fff;
 	text-transform: uppercase;

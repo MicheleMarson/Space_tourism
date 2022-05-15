@@ -53,16 +53,39 @@ body {
 	box-shadow: 0px 0px 0px 88px rgb(151, 151, 151, 0.136);
 }
 
+.name {
+	color: #fff;
+	font-size: 56px;
+	text-transform: uppercase;
+	font-family: "Barlow Condensed", sans-serif;
+	padding-bottom: 46px;
+}
+
+.text {
+	max-width: 445px;
+	font-family: "Barlow", sans-serif;
+	/* padding-bottom: 122px; */
+}
+
 /* tablet/ipad */
 @media only screen and (max-width: 768px) {
 	.sub-title {
 		font-size: 16px;
+	}
+
+	body {
+		background: url("../assets/home/background-home-tablet.jpg");
+		background-size: cover;
 	}
 }
 
 @media only screen and (max-width: 1130px) {
 	section {
 		text-align: center;
+	}
+	body {
+		background: url("../assets/home/background-home-mobile.jpg");
+		background-size: cover;
 	}
 	.left,
 	.right {
@@ -80,7 +103,7 @@ body {
 	}
 
 	.right {
-		padding: 154px 0;
+		padding-top: 154px;
 	}
 }
 

@@ -34,7 +34,7 @@ section {
 	padding-bottom: 26px;
 }
 
-.name {
+/* .name {
 	color: #fff;
 	font-size: 56px;
 	text-transform: uppercase;
@@ -45,8 +45,7 @@ section {
 .text {
 	max-width: 445px;
 	font-family: "Barlow", sans-serif;
-	/* padding-bottom: 122px; */
-}
+} */
 
 .carousel {
 	display: flex;
