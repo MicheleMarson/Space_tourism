@@ -38,7 +38,7 @@ section {
 	color: #fff;
 	font-size: 56px;
 	text-transform: uppercase;
-	font-family: "Bellefair", sans-serif;
+	font-family: "Barlow Condensed", sans-serif;
 	padding-bottom: 46px;
 }
 
@@ -85,3 +85,55 @@ section {
 	background-size: cover;
 	height: 484px;
 } */
+
+@media only screen and (max-width: 768px) {
+	.image > img {
+		position: relative;
+		width: 100%;
+	}
+
+	.content .right {
+		display: none;
+	}
+
+	.left {
+		width: 100%;
+		text-align: center;
+		height: 350px;
+	}
+
+	section {
+		padding: 0 26px 0px 26px;
+	}
+
+	.carousel {
+		justify-content: center;
+		margin-bottom: 1.6rem;
+	}
+
+	.content {
+		display: block;
+	}
+
+	.text {
+		max-width: unset;
+	}
+
+	.name {
+		font-size: 40px;
+	}
+
+	.title {
+		font-size: 24px;
+	}
+}
+
+@media only screen and (max-width: 375px) {
+	.name {
+		font-size: 24px;
+	}
+
+	.title {
+		font-size: 16px;
+	}
+}

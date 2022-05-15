@@ -24,7 +24,7 @@ section {
 .title {
 	color: #fff;
 	text-transform: uppercase;
-	font-family: "Bellefair", sans-serif;
+	font-family: "Barlow Condensed", sans-serif;
 }
 
 .title-h3 {
@@ -264,7 +264,7 @@ nav a {
 		margin: 0 0 0 20px;
 		width: 100%;
 		height: unset;
-		padding-bottom: 19px;
+		margin-bottom: 19px;
 		display: flex;
 		align-items: center;
 		font-size: 16px;
@@ -279,7 +279,8 @@ nav a {
 
 	.nav-bar a {
 		width: 100%;
-		display: initial;
+		display: flex;
+		justify-content: flex-start;
 		height: 31px;
 	}
 
@@ -294,5 +295,9 @@ nav a {
 	}
 	.nav-bar ul li a span {
 		display: inline;
+	}
+
+	.title-h3 {
+		text-align: center;
 	}
 }
